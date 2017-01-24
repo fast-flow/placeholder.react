@@ -39,6 +39,7 @@ var App = React.createClass({
                 </Placeholder>
 
                 <hr/>
+                
                 <Placeholder content={(<div>img<storng>:</storng> <img src="https://pic3.zhimg.com/a91769a7a_l.jpg" height="10" /></div>)} className="my-placeholder" value={self.state.value} >
                     <input value={self.state.value} onChange={function (e) {
                             self.setState({

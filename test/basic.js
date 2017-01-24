@@ -14,30 +14,50 @@ var Placeholder = require('placeholder.react').default
 var App = React.createClass({
     getInitialState() {
         return {
-            show: true
+            value: ''
         }
     },
     render: function () {
         var self = this
+        let commonProps = {
+            value: self.state.value,
+            onChange: function (e) {
+                self.setState({
+                    value: e.target.value
+                })
+            }
+        }
         return (
             <div>
-                {
-                    self.state.show?
-                    (
-                        <Placeholder onClose={function() {
-                                self.setState({
-                                    show: false
-                                })
-                            }} >basic</Placeholder>
-                    ):null
-                }
+                <Placeholder className="test1" content="placeholder text" value={self.state.value} >
+                    <input className="test1-input" type="text" {...commonProps} />
+                </Placeholder>
             </div>
         )
     }
 })
 
 const app = TestUtils.renderIntoDocument(<App/>);
-expect(TestUtils.scryRenderedDOMComponentsWithClass(app, 'r-alert').length).to.eql(1)
-TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithClass(app, 'r-alert-close'))
-expect(TestUtils.scryRenderedDOMComponentsWithClass(app, 'r-alert').length).to.eql(0)
+
+expect(TestUtils.findRenderedDOMComponentWithClass(app, 'test1').className).to.eql('r-placeholder test1 r-placeholder--typeInput')
+
+// change
+let eInput1 = TestUtils.findRenderedDOMComponentWithClass(app, 'test1-input')
+eInput1.value = 'abcd'
+TestUtils.Simulate.change(eInput1)
+expect(TestUtils.findRenderedDOMComponentWithClass(app, 'test1').className).to.eql('r-placeholder test1 r-placeholder--existValue r-placeholder--typeInput')
+eInput1.value = ''
+
+// focus
+TestUtils.Simulate.change(eInput1)
+expect(TestUtils.findRenderedDOMComponentWithClass(app, 'test1').className).to.eql('r-placeholder test1 r-placeholder--typeInput')
+TestUtils.Simulate.focus(eInput1)
+expect(TestUtils.findRenderedDOMComponentWithClass(app, 'test1').className).to.eql('r-placeholder test1 r-placeholder--focus r-placeholder--typeInput')
+TestUtils.Simulate.blur(eInput1)
+expect(TestUtils.findRenderedDOMComponentWithClass(app, 'test1').className).to.eql('r-placeholder test1 r-placeholder--typeInput')
+
+// click
+TestUtils.Simulate.click(TestUtils.findRenderedDOMComponentWithClass(app, 'r-placeholder-content'))
+expect(TestUtils.findRenderedDOMComponentWithClass(app, 'test1').className).to.eql('r-placeholder test1 r-placeholder--focus r-placeholder--typeInput')
+
 console.info('basic.js test done')

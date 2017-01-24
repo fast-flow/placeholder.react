@@ -13,6 +13,11 @@ npm install placeholder.react --save
 
 [Online](http://fast-flow.github.io/placeholder.react)
 
-## Change log
+## props
 
-[CHANGELOG](./CHANGELOG.md)
+<!-- MR-R{
+    type: "pre",
+    file: "./lib/props.js"
+} -->
+
+Read props.js [lib/props.js](lib/props.js)
