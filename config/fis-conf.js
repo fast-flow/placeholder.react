@@ -20,7 +20,7 @@ if (fis.project.currentMedia() === 'ghversion') {
         domain:'/' + iPackage.version
     })
 }
-fis.match('{config/**,npm-debug.log,yarn.lock}', {
+fis.match('{config/**,npm-debug.log,yarn.lock,test/**}', {
     release: false
 })
 
