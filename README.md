@@ -1,6 +1,6 @@
 # placeholder.react
 
-> React, text or image placeholder.
+> React, text or image placeholder.Custom style!
 
 [![Build Status](https://api.travis-ci.org/fast-flow/placeholder.react.svg)](https://travis-ci.org/fast-flow/placeholder.react)
 [![NPM version](https://img.shields.io/npm/v/placeholder.react.svg?style=flat)](https://npmjs.org/package/placeholder.react)
