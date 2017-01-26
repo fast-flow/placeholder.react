@@ -12,12 +12,3 @@ npm install placeholder.react --save
 [![Preview](./example/preview.png)](http://fast-flow.github.io/placeholder.react/example)
 
 [Online](http://fast-flow.github.io/placeholder.react)
-
-## props
-
-<!-- MR-R{
-    type: "pre",
-    file: "./lib/props.js"
-} -->
-
-Read props.js [lib/props.js](lib/props.js)

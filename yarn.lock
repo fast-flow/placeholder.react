@@ -2864,13 +2864,13 @@ marked@^0.3.6:
   version "0.3.6"
   resolved "http://registry.npm.taobao.org/marked/download/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
 
-markrun-themes@^0.0.6:
-  version "0.0.6"
-  resolved "http://registry.npm.taobao.org/markrun-themes/download/markrun-themes-0.0.6.tgz#47812d0d611d149af72e46238e6fc7dcd2ee545e"
+markrun-themes@0.0.8:
+  version "0.0.8"
+  resolved "http://registry.npm.taobao.org/markrun-themes/download/markrun-themes-0.0.8.tgz#d4bf660aacf36eed0c34460525c2a289895c2b6f"
 
-markrun@^0.15.0:
-  version "0.15.0"
-  resolved "http://registry.npm.taobao.org/markrun/download/markrun-0.15.0.tgz#dc846b71ceebe8c6f31db38391cbe63189cc7127"
+markrun@0.18.0:
+  version "0.18.0"
+  resolved "http://registry.npm.taobao.org/markrun/download/markrun-0.18.0.tgz#9eedd62ec9d0051930b857c39d53527d3cc3bda5"
   dependencies:
     ejs "^2.5.2"
     extend "^3.0.0"

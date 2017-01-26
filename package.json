@@ -2,7 +2,7 @@
   "name": "placeholder.react",
   "version": "0.1.0",
   "description": "React, text or image placeholder.",
-  "repository": "placeholder.react/fast-flow",
+  "repository": "fast-flow/placeholder.react",
   "homepage": "http://fast-flow.github.io/placeholder.react",
   "gitUsername": "fast-flow",
   "gitRepository": "placeholder.react",
@@ -12,15 +12,16 @@
     "react-dom": "0.14.8"
   },
   "scripts": {
-    "hot": "node config/hot-server.js",
-    "dev": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js",
-    "hot:debug": "node config/webpack-server.js",
-    "dev:debug": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js --verbose",
+    "js": "node config/hot-server.js",
+    "doc": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js",
+    "js:debug": "node config/webpack-server.js",
+    "doc:debug": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js --verbose",
     "gh": "fis3 release gh -c -d ./output -r ./ -f config/fis-conf.js && fis3 release ghversion -c -d ./output -r ./ -f config/fis-conf.js && webpack --progress --config ./config/webpack.gh.js && webpack --progress --config ./config/webpack.ghversion.js",
     "s": "node config/static-server.js",
     "gh-push": "node config/gh-push.js",
     "npm": "fis3 release npm -c -d ./output -r ./ -f config/fis-conf.js",
-    "test": "jest"
+    "test-ci": "./node_modules/jest/bin/jest.js",
+    "test": "./node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
     "moduleNameMapper": {
@@ -62,8 +63,8 @@
     "json-loader": "^0.5.4",
     "less-loader": "^2.2.3",
     "less-plugin-functions": "^0.0.2",
-    "markrun": "^0.15.0",
-    "markrun-themes": "^0.0.6",
+    "markrun": "0.18.0",
+    "markrun-themes": "0.0.8",
     "open": "^0.0.5",
     "react-addons-test-utils": "0.14.8",
     "react-hot-loader": "^1.3.1",
