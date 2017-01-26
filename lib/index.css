@@ -1,0 +1,42 @@
+/* Base style */
+.r-placeholder {
+    position: relative;
+    display: inline-block;
+}
+html .r-placeholder--focus {
+    .r-placeholder-content {
+        display: none;
+    }
+}
+html .r-placeholder--existValue {
+    .r-placeholder-content {
+        display: none;
+    }
+}
+.r-placeholder-content {
+    box-sizing: border-box;
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+html .r-placeholder--typeInput {
+    .r-placeholder-content {
+        white-space:nowrap;
+    }
+}
+html .r-placeholder--typeTextarea {
+    .r-placeholder-content {
+        word-wrap: break-word;
+        word-break: normal;
+    }
+}
+html .r-placeholder--typeCustom {
+
+}
+/* Configurable style */
+.r-placeholder-content {
+    color:#A9A9A9;
+}
