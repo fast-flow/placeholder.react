@@ -9,7 +9,8 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "react": "0.14.8",
-    "react-dom": "0.14.8"
+    "react-dom": "0.14.8",
+    "babel-polyfill": "^6.22.0"
   },
   "scripts": {
     "js": "node config/hot-server.js",
@@ -41,7 +42,6 @@
     "babel-plugin-transform-react-display-name": "^6.8.0",
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "babel-plugin-transform-react-jsx-source": "^6.9.0",
-    "babel-polyfill": "^6.22.0",
     "babel-preset-es2015": "^6.18.0",
     "console-polyfill": "^0.2.3",
     "css-loader": "^0.26.1",
