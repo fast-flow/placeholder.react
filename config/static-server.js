@@ -3,17 +3,11 @@ var express = require('express')
 var open = require("open")
 var iPackage = require('../package.json')
 var hashToPort = require('hash-to-port')
-var serverPort = hashToPort(iPackage.name + 'fast-flow/react:server')
+var serverPort = hashToPort(iPackage.name + 'fast-flow/react:static-server')
 
 var app = express();
 app.use(express.static(__dirname + '/../output'))
-app.use(function (req, res, next) {
-    var versionUrl = '/' + iPackage.version
-    if (req.path.indexOf(versionUrl) === 0) {
-        res.redirect(req.path.replace(versionUrl, ''))
-    }
-    next()
-})
+app.use(require('./connect-redirect.js'))
 console.log(__dirname + '/../output')
 app.listen(serverPort, function(err) {
   if (err) {
