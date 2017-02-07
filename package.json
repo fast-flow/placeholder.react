@@ -1,6 +1,6 @@
 {
   "name": "placeholder.react",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "React, text or image placeholder.Custom style!",
   "repository": "fast-flow/placeholder.react",
   "homepage": "http://fast-flow.github.io/placeholder.react",
@@ -9,8 +9,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "react": "0.14.8",
-    "react-dom": "0.14.8",
-    "babel-polyfill": "^6.22.0"
+    "react-dom": "0.14.8"
   },
   "scripts": {
     "js": "node config/hot-server.js",
